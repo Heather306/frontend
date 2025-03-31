@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Facial Skin Disease Detectection</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Include Cropper.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" />
+</head>
+<body>
+
+    <!-- Header Section (Logo and Web App Name) -->
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo" class="logo-img" />
+            <h1 class="webapp-name">Facial Skin Disease Detection</h1>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <section class="disease-description">
+            <h2>Common Facial Diseases</h2>
+            <p>
+                Facial diseases can be categorized into several types, including acne, rosacea, eczema, and skin cancer. 
+                Early detection and diagnosis of skin conditions are essential to receiving appropriate treatment.
+                Upload a photo of your face to get a better understanding of your skin condition.
+            </p>
+        </section>
+
+        <header>
+            <h1>Upload Your Image</h1>
+            <p class="subline-text">Upload a photo to analyze your skin condition.</p>
+        </header>
+
+        <!-- Image Preview Section -->
+        <div class="image-section">
+            <div class="image-preview">
+                <img id="uploaded-image" src="" alt="Uploaded Image" style="display: none;">
+            </div>
+            <button id="remove-image-btn" style="display: none;" onclick="removeImage()">Remove Image</button>
+        </div>
+
+        <!-- Image Upload Form -->
+        <div class="upload-form">
+            <label for="imageUpload" class="upload-label">Upload a Photo</label>
+            <input type="file" id="imageUpload" accept="image/*" onchange="previewImage(event)">
+        </div>
+
+        <!-- Cropping Tool and Result Popup -->
+        <div id="cropper-container" style="display:none;">
+            <img id="image-to-crop" src="" alt="Image to Crop">
+            <button onclick="cropImage()">Crop Image</button>
+        </div>
+
+        <div id="result-popup" class="popup" style="display: none;">
+            <div class="popup-content">
+                <h3>Analysis Result</h3>
+                <p id="result-text">Skin condition analysis will be displayed here.</p>
+                <button onclick="closePopup()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Cropper.js JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
