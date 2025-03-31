@@ -1,0 +1,145 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://www.bing.com/images/search?view=detailV2&ccid=0PKJuUgn&id=920AB7F770CE1E74931C0F19CDF72F3112D12C19&thid=OIP.0PKJuUgn3K6c0lmjc8Oe4gHaFM&mediaurl=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fthumbnails%2F000%2F159%2F846%2Fsmall_2x%2Fvector-pimples-on-skin-seamless-background.jpg&exph=400&expw=571&q=facial+skin+disease+webapp+background+pic&simid=608007949607594668&form=IRPRST&ck=2D40C5462DD73156B668070CE49A1681&selectedindex=25&itb=0&cw=1339&ch=634&ajaxhist=0&ajaxserp=0&vt=0&sim=11'); /* Add your image URL here */
+    background-size: cover; /* Makes sure the image covers the whole background */
+    background-position: center center; /* Centers the background image */
+    background-attachment: fixed; /* Keeps the image fixed when scrolling */
+    color: #333;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 96px;
+}
+
+.container {
+    background-color: #ffffff; /* White background for the main content */
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    flex-grow: 1; /* Allow the container to take up the remaining space */
+    overflow-y: scroll; /* Enables vertical scrolling if the content overflows */
+}
+
+/* Header Styles */
+.header {
+    width: 100%;
+    background-color: #005c8a; /* Blue background for header */
+    padding: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.webapp-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Facial Disease Description Section */
+.disease-description {
+    background-color: #e0f7fa; /* Light blue background */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-align: left;
+    color: #444;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.disease-description h2 {
+    font-size: 24px;
+    color: #005c8a;
+    margin-bottom: 10px;
+}
+
+.disease-description p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Image Preview Section */
+.image-section {
+    margin-bottom: 30px;
+}
+
+.image-preview img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #ff4c4c; /* Red color for remove button */
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e04040;
+}
+
+/* Image Upload Form */
+.upload-form {
+    margin-top: 20px;
+}
+
+.upload-label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+input[type="file"] {
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    transition: border-color 0.3s ease;
+}
+
+input[type="file"]:hover {
+    border-color: #005c8a;
+}
+
+/* Padding for content to prevent overlap with fixed header */
+body
+

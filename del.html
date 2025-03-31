@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Removal Example</title>
+    <style>
+        /* Container for image and delete button */
+        .image-container {
+            position: relative;
+            display: inline-block;
+            margin: 10px;
+        }
+        /* Styling the delete button */
+        .delete-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 50%;
+        }
+        /* Optional: styling for the gallery */
+        #image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Image Gallery Section -->
+    <div id="image-gallery">
+        <!-- Example Image to Remove -->
+        <div class="image-container">
+            <img src="https://via.placeholder.com/150" alt="Placeholder Image" width="150">
+            <button class="delete-btn" onclick="deleteImage(this)">X</button>
+        </div>
+        <!-- Another Example Image -->
+        <div class="image-container">
+            <img src="https://via.placeholder.com/150/ff0000" alt="Another Placeholder Image" width="150">
+            <button class="delete-btn" onclick="deleteImage(this)">X</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to delete an image
+        function deleteImage(button) {
+            // Get the parent image container of the clicked button
+            const imageContainer = button.parentElement;
+
+            // Remove the entire image container (including image and button)
+            imageContainer.remove();
+        }
+    </script>
+    
+</body>
+</html>
